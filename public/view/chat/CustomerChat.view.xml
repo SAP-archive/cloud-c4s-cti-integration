@@ -1,0 +1,58 @@
+<mvc:View
+        height="500px"
+        xmlns:l="sap.ui.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.ui.layout.form"
+        xmlns="sap.m"
+        controllerName="sap.ui.c4c.widget.chat.CustomerChat" >
+    <Page class="sapUiContentPadding" >
+        <content>
+        <l:VerticalLayout>
+            <l:HorizontalLayout visible="{visibility>/customerInputEnabled}">
+                <f:SimpleForm  id="SimpleFormChange1"
+                              editable="true"
+                              layout="ResponsiveGridLayout">
+                    <f:content >
+                        <Label text="Name" labelFor="nameText"/>
+                        <Input id="nameText" value="{customer>/Name}" />
+                        <Label text="Email" labelFor="Email" />
+                        <Input id="Email" value="{customer>/Email}" />
+                        <Button type="Accept" text="Start Chat" press="onInitiateChat"/>
+                    </f:content>
+                </f:SimpleForm>
+            </l:HorizontalLayout>
+            <l:HorizontalLayout visible="{visibility>/customerDetailsPresent}">
+                <f:SimpleForm id="SimpleFormChange2"
+                              editable="false"
+                              layout="ResponsiveGridLayout">
+                    <f:content>
+                        <Text id="nameText-2" text="{customer>/Name} {customer>/Email}" />
+                    </f:content>
+                </f:SimpleForm>
+            </l:HorizontalLayout>
+            <l:VerticalLayout visible="{visibility>/customerDetailsPresent}">
+                <List
+                        id="list"
+                        mode="Read"
+                        enableBusyIndicator="true"
+                        headerText="Chats"
+                        growing="true"
+                        items="{
+			                    path: '/ChatHistory'
+		                    }" >
+                    <StandardListItem path="/"
+                            title="{Name}"
+                            description="{chatMessage}"
+                            icon="{PersonImg}"
+                            iconDensityAware="false"
+                            iconInset="false" />
+                </List>
+                <l:HorizontalLayout>
+                    <Input placeholder="Type Here"  value="{/chatMessage}" id="inputani-1" submit="onSendChat" />
+                    <Button text="Send" type="Accept" press="onSendChat"  />
+                </l:HorizontalLayout>
+            </l:VerticalLayout>
+        </l:VerticalLayout>
+        </content>
+    </Page>
+</mvc:View>

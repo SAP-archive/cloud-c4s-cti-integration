@@ -1,0 +1,16 @@
+<mvc:View
+        xmlns:l="sap.ui.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.ui.layout.form"
+        xmlns="sap.m"
+        controllerName="sap.ui.c4c.widget.App">
+    <Panel expandable="true" expanded="false" headerText="Simple Push Message" width="auto" class="sapUiResponsiveMargin">
+    <l:VerticalLayout>
+        <Text text="This page demonstrates how to push a simple message SAP C4C Live activity"></Text>
+        <l:HorizontalLayout>
+                <Input   value="{/phoneNumber}" id="inputani-1" />
+                <Button text="Simulate Call" type="Accept" press="onAccept"  />
+        </l:HorizontalLayout>
+    </l:VerticalLayout>
+    </Panel>
+</mvc:View>

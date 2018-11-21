@@ -1,0 +1,15 @@
+<mvc:View
+        xmlns:l="sap.ui.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.ui.layout.form"
+        xmlns="sap.m"
+        controllerName="sap.ui.c4c.widget.SocketView">
+    <Panel expandable="true" expanded="false" headerText="Socket Based Demo" width="auto" class="sapUiResponsiveMargin">
+
+    <l:VerticalLayout class="sapUiSmallMargin">
+                <Link text="Open External Simulator" href="{/SimulateLink}" target="_blank"/>
+                <Label text="Incoming message from external" labelFor="incomingMessageText-1"/>
+                <Text   id="incomingMessageText-1" text="{/messageText}"/>
+            </l:VerticalLayout>
+    </Panel>
+</mvc:View>

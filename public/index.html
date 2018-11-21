@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="UTF-8">
+    <title>SAP Service Cloud customer widget example</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+            id="sap-ui-bootstrap"
+            src='https://openui5.hana.ondemand.com/1.48.6/resources/sap-ui-core.js'
+            data-sap-ui-theme="sap_belize"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-preload="async"
+            data-sap-ui-resourceroots='{
+				"sap.ui.c4c.widget": "./view/"
+			}'>
+    </script>
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.xmlview({
+                viewName: "sap.ui.c4c.widget.App"
+            }).placeAt("content");
+        });
+
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.xmlview({
+                viewName: "sap.ui.c4c.widget.SocketView"
+            }).placeAt("SocketBasedListner");
+        });
+
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.xmlview({
+                viewName: "sap.ui.c4c.widget.OutboundCallView"
+            }).placeAt("OutboundCallView");
+        });
+
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.xmlview({
+                viewName: "sap.ui.c4c.widget.chat.Agent"
+            }).placeAt("AgentChatView");
+        });
+
+    </script>
+</head>
+<body class="sapUiBody">
+    <div id="content"> </div>
+    <div id="SocketBasedListner"> </div>
+    <div id="OutboundCallView" ></div>
+    <div id="AgentChatView" ></div>
+</body>
+</html>

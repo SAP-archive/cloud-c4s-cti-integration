@@ -1,0 +1,40 @@
+<mvc:View
+        xmlns:l="sap.ui.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        xmlns:f="sap.ui.layout.form"
+        xmlns:core="sap.ui.core"
+        controllerName="sap.ui.c4c.widget.chat.Agent"
+    >
+    <Panel expandable="true" expanded="false" headerText="Chat Window" width="auto" class="sapUiResponsiveMargin">
+        <l:VerticalLayout visible="{/incomingChatWaiting}">
+            <Link text="Customer Window" href="{staticLink>/ChatLink}" target="_blank"/>
+            <Text text="Waiting for incoming chat" ></Text>
+        </l:VerticalLayout>
+        <l:VerticalLayout visible="{/incomingChatInitiated}">
+            <Text text="Chatting with - {/CustomerName} - {/Email} " />
+            <List
+                    id="list"
+                    mode="Read"
+                    enableBusyIndicator="true"
+                    growing="true"
+                    items="{
+                            path: '/ChatHistory'
+                        }" >
+                <StandardListItem
+                        title="{Name}"
+                        description="{chatMessage}"
+                        icon="{PersonImg}"
+                        iconDensityAware="false"
+                        iconInset="false" />
+            </List>
+            <l:HorizontalLayout>
+                <Input placeholder="Type Here" value="{/chatMessage}" id="inputani-1" submit="onSendChat" />
+                <!--<Button text="Send" type="Accept" press="onSendChat"  />-->
+                <Button text="End Chat" type="Accept" press="onEndChat"  />
+            </l:HorizontalLayout>
+            <l:HorizontalLayout>
+            </l:HorizontalLayout>
+        </l:VerticalLayout>
+    </Panel>
+</mvc:View>

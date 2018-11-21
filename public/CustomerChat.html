@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="UTF-8">
+    <title>SAP Service Cloud customer chat example</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+            id="sap-ui-bootstrap"
+            src='https://openui5.hana.ondemand.com/1.48.6/resources/sap-ui-core.js'
+            data-sap-ui-theme="sap_belize"
+            data-sap-ui-libs="sap.m"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-preload="async"
+            data-sap-ui-resourceroots='{
+				"sap.ui.c4c.widget.chat": "./view/chat"
+			}'>
+    </script>
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            sap.ui.xmlview({
+                viewName: "sap.ui.c4c.widget.chat.CustomerChat"
+            }).placeAt("chatApp");
+        });
+    </script>
+</head>
+<body class="sapUiBody">
+    <div id="chatApp"> </div>
+</body>
+</html>

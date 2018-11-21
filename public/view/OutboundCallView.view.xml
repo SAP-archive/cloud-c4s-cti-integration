@@ -1,0 +1,38 @@
+<mvc:View
+        height="100%"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.ui.layout.form"
+        xmlns="sap.m"
+        controllerName="sap.ui.c4c.widget.OutboundCallView">
+    <Panel expandable="true" expanded="false" headerText="Outbound Call " width="auto" class="sapUiResponsiveMargin">
+
+    <Text text="Outbound call information information"></Text>
+    <f:SimpleForm >
+        <f:content>
+            <Label text="Phone Number" labelFor="ani-1"/>
+            <Text id="ani-1" type="Tel" text="{/PhoneNumber}"  />
+            <Label text="Business Partner ID" labelFor="BusinessPartnerID-1"/>
+            <Text id="BusinessPartnerID-1" type="Tel" text="{/BusinessPartnerID}"  />
+            <Label text="ObjectID " labelFor="ObjectID-1"/>
+            <Text id="ObjectID-1" type="Tel" text="{/ObjectID}"  />
+            <Label text="Object Type Code " labelFor="ObjectTypeCode-1"/>
+            <Text id="ObjectTypeCode-1" type="Tel" text="{/ObjectTypeCode}"  />
+            <Label text="ES Object ID " labelFor="ESObjectID-1"/>
+            <Text id="ESObjectID-1" type="Tel" text="{/ESObjectID}"  />
+            <Label text="Activity UUID " labelFor="ActivityUUID-1"/>
+            <Text id="ActivityUUID-1"  text="{/ActivityUUID}"  />
+            <Label text="Direction " labelFor="Direction-1"/>
+            <Text id="Direction-1" type="Tel" text="{/Direction}" />
+            <Label text="Is BTD Ref " labelFor="IsBTDRef-1"/>
+            <Text id="IsBTDRef-1" text="{/IsBTDRef}" />
+            <Label text="Logged In User ID " labelFor="LoggedInUserID-1"/>
+            <Text id="LoggedInUserID-1" text="{/LoggedInUserID}" />
+            <Label text="Object Thing Type" labelFor="ObjectThingType-1"/>
+            <Text id="ObjectThingType-1" text="{/ObjectThingType}" />
+            <Label text="Object UUID " labelFor="ObjectUUID-1"/>
+            <Text id="ObjectUUID-1" text="{/ObjectUUID}" />
+        </f:content>
+    </f:SimpleForm>
+    </Panel>
+
+</mvc:View>

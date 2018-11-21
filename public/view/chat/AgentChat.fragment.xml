@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:gmaps="openui5.googlemaps"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Popover
+		title="Chat"
+		class="sapUiContentPadding"
+		placement="Auto">
+        <content>
+            <mvc:XMLView id="agentChat" viewName="sap.ui.c4c.widget.chat.Agent"></mvc:XMLView>
+        </content>
+	</Popover>
+</core:FragmentDefinition>
