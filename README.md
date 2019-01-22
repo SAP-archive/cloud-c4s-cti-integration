@@ -15,8 +15,8 @@ Download Git for cloning this repository.
 <br>Clone this git repository and in the root folder execute the following commands in the shell:
 
 ```shell
-`npm install`
-`npm start`
+npm install
+npm start
 ```
 In the live activity configuration screen
 select 
