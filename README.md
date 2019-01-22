@@ -19,7 +19,7 @@ Download Git for cloning this repository.
 `npm start`
 ```
 In the live activity configuration screen
-Select 
+select 
 - Provider as "External Provider"
 - Provider url as "http://localhost:3000" ( npm default port is 3000 )
 
@@ -30,7 +30,7 @@ There are no known issues
 This project is provided "as-is", with no expected changes or support.  
 
 # License
-opyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
 This file is licensed under the SAP Sample Code License except as noted otherwise in the [LICENSE](https://github.com/SAP/cloud-c4s-cti-integration/blob/master/License.md) file.
 
 
