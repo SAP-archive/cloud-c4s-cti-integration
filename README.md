@@ -6,7 +6,7 @@ It can be used to simulate incoming calls or outgoing calls to verify the integr
 It is important to note that there is no PBX/PSTN setup to make actual phone calls via this widget. It's main aim is to simulate the request on the SAP side in the same way as it should happen in a real call center setup.
 
 ## Requirements
-This widget runs with SAP Cloud for Customer(C4C) product.SAP Cloud for Customer is a paid offering from SAP Service Cloud. There is no demo available for it.
+This widget runs with SAP Cloud for Customer(C4C) product. SAP Cloud for Customer is a paid offering from SAP Service Cloud. There is no demo available for it.
 The logged in user in C4C should have the Live Activity Center workcenter assigned to it.
 More details on the setup in C4C for widget based integration can be found [here]( https://help.sap.com/viewer/5f35ee8b31e44f2786d7c2696defa2f6/1811/en-US/b3d0c82ec5de408d9fdb5e894094dc3d.html#loiob3d0c82ec5de408d9fdb5e894094dc3d).
 
